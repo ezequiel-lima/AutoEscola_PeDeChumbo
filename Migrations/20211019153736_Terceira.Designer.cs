@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Prova1910.Data;
 
 namespace Prova1910.Migrations
 {
     [DbContext(typeof(Prova1910Context))]
-    partial class Prova1910ContextModelSnapshot : ModelSnapshot
+    [Migration("20211019153736_Terceira")]
+    partial class Terceira
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

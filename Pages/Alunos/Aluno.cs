@@ -10,6 +10,7 @@ namespace Prova1910.Pages.Alunos
     {
         public int ID { get; set; }
         public string Nome { get; set; }
+        public string Curso { get; set; }
 
         [Required, StringLength(13)]
         public string RA { get; set; }

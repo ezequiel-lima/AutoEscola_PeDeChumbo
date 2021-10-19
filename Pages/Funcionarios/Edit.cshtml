@@ -1,0 +1,60 @@
+﻿@page
+@model Prova1910.Pages.Funcionarios.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Funcionario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Funcionario.ID" />
+            <div class="form-group">
+                <label asp-for="Funcionario.Nome" class="control-label"></label>
+                <input asp-for="Funcionario.Nome" class="form-control" />
+                <span asp-validation-for="Funcionario.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Funcionario.dtAdmissao" class="control-label"></label>
+                <input asp-for="Funcionario.dtAdmissao" class="form-control" />
+                <span asp-validation-for="Funcionario.dtAdmissao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Funcionario.SalBruto" class="control-label"></label>
+                <input asp-for="Funcionario.SalBruto" class="form-control" />
+                <span asp-validation-for="Funcionario.SalBruto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Funcionario.Cidade" class="control-label"></label>
+                <input asp-for="Funcionario.Cidade" class="form-control" />
+                <span asp-validation-for="Funcionario.Cidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Funcionario.Email" class="control-label"></label>
+                <input asp-for="Funcionario.Email" class="form-control" />
+                <span asp-validation-for="Funcionario.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Funcionario.Senha" class="control-label"></label>
+                <input asp-for="Funcionario.Senha" class="form-control" />
+                <span asp-validation-for="Funcionario.Senha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

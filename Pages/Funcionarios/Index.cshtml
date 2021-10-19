@@ -1,0 +1,66 @@
+﻿@page
+@model Prova1910.Pages.Funcionarios.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].dtAdmissao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].SalBruto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Senha)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Funcionario) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dtAdmissao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalBruto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Senha)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
